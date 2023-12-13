@@ -1,0 +1,354 @@
+<breadcrumb></breadcrumb>
+            <mat-card >
+                  <mat-tab-group [(selectedIndex)]="selectedTab">
+                        <mat-tab label="T351DAY">
+                              <mat-card class="p-1">
+                                    <div class="row" style="padding-left: 5px;">
+                                          <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                <div class="card">
+                                                <div class="card-header d-flex justify-content-between">
+                                                      <div>
+                                                            <span class="headerFont">Motor Details</span>
+                                                      </div>
+                                                      <div>
+                                                            <span class="headerFont2">Registration No- T352DAY | Chassis No - JTGRB71JXE7017018</span>
+                                                      </div>
+                                                      
+                                                </div>
+                                                <div class="card-body">
+                                                      <div class="row mt-2">
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Make</label><br>
+                                                                  <span>Toyota</span>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Model</label><br>
+                                                                  <span>Landcruiser</span>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Body Type</label><br>
+                                                                  <span>Hardtop</span>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Vehicle Usage</label><br>
+                                                                  <span>Private or Normal</span>
+                                                            </div>
+                                                      </div>
+                                                      <!-- <hr class="m-0 p-0"> -->
+                                                      <div class="row mt-2">
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Motor Category</label><br>
+                                                                  <span>Motor Vehicle</span>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Engine No</label><br>
+                                                                  <span>7712</span>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Engine Capacity</label><br>
+                                                                  <span>4200</span>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Manufacture Year</label><br>
+                                                                  <span>2014</span>
+                                                            </div>
+                                                      </div>
+                                                      <!-- <hr class="m-0 p-0"> -->
+                                                      <div class="row mt-2">
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Owner Categry</label><br>
+                                                                  <span>Company</span>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Seating Capacity</label><br>
+                                                                  <span>8</span>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Gross Weight</label><br>
+                                                                  <span>2400</span>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Tare Weight</label><br>
+                                                                  <span>2000</span>
+                                                            </div>
+                                                      </div>
+                                                      <!-- <hr class="m-0 p-0"> -->
+                                                </div>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </mat-card>
+                              <mat-card class="p-1">
+                                    <div class="row" style="padding-left: 5px;">
+                                    <div class="col-sm-6 col-md-6 col-lg-6">
+                                          <div class="card">
+                                                <div class="card-header ">
+                                                      <span class="headerFont">Vehicle Details</span>
+                                                </div>
+                                                <div class="card-body">
+                                                <div class="row mt-2">
+                                                      <div class="col-12 col-sm-6 col-md-4 col-lg-4 mt-2">
+                                                            <label class="labelText">Insurance Type&nbsp;<span class="text-danger">*</span></label><br>
+                                                            <ng-select class="custom-input-select" appendTo="body" [items]="sourceList" [(ngModel)]="sourceValue"  bindValue="Code" bindLabel="CodeDesc">
+                                                            </ng-select>
+                                                      </div>
+                                                      <div class="col-12 col-sm-6 col-md-4 col-lg-4 mt-2">
+                                                            <label class="labelText">Insurance Class&nbsp;<span class="text-danger">*</span></label><br>
+                                                            <input class="custom-input">
+                                                      </div>
+                                                      <div class="col-12 col-sm-6 col-md-4 col-lg-4 mt-2">
+                                                            <label class="labelText">Body Type&nbsp;<span class="text-danger">*</span></label><br>
+                                                            <input class="custom-input" >
+                                                      </div>
+                                                      <div class="col-12 col-sm-6 col-md-4 col-lg-4 mt-2">
+                                                            <label class="labelText">Motor Usage&nbsp;<span class="text-danger">*</span></label><br>
+                                                            <ng-select class="custom-input-select" appendTo="body" [items]="sourceList" [(ngModel)]="sourceValue"  bindValue="Code" bindLabel="CodeDesc">
+                                                            </ng-select>
+                                                      </div>
+                                                      <div class="col-12 col-sm-6 col-md-4 col-lg-4 mt-2">
+                                                            <label class="labelText">Claims Applicable?</label><br>
+                                                            <div class="hidden-toggles">
+                                                                  <input name="coloration-level1" type="radio" id="claims_yes" class="hidden-toggles__input">
+                                                                  <label for="claims_yes" class="hidden-toggles__label">Yes</label>
+                                                                  
+                                                                  <input name="coloration-level1" type="radio" id="claims_no" class="hidden-toggles__input" checked>
+                                                                  <label for="claims_no" class="hidden-toggles__label">No</label>	
+                                                            </div>
+                                                      </div>
+                                                      <div class="col-12 col-sm-6 col-md-4 col-lg-4 mt-2">
+                                                            <label class="labelText">Gps Tracking Enabled?</label><br>
+                                                            <div class="hidden-toggles">
+                                                                  <input name="gps-level1" type="radio" id="gps_yes" class="hidden-toggles__input">
+                                                                  <label for="gps_yes" class="hidden-toggles__label">Yes</label>
+                                                                  
+                                                                  <input name="gps-level1" type="radio" id="gps_no" class="hidden-toggles__input" checked>
+                                                                  <label for="gps_no" class="hidden-toggles__label">No</label>	
+                                                            </div>
+                                                      </div>
+                                                      
+                                                      <div class="col-12 col-sm-6 col-md-4 col-lg-4 mt-2">
+                                                            <label class="labelText">TIRA CoverNote No</label><br>
+                                                            <input class="custom-input">
+                                                      </div>
+                                                </div>
+                                                </div>
+                                          </div>
+                                          
+                                    </div>
+                                    <div class="line-middle" style="padding-top: 5px !important;padding-bottom: 5px !important;"></div>
+                                    <div class="col-sm-5 col-md-5 col-lg-5">
+                                          <div class="card">
+                                          <div class="card-header d-flex justify-content-between p-0">
+                                                <div >
+                                                      <span class="headerFont">SumInsured Details</span>
+                                                </div>
+                                                <div>
+                                                      <span class="headerFont2">Currency(TZS)</span>    
+                                                </div>
+                                          </div>
+                                          <div class="card-body">
+                                                <div class="row">
+                                                      <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-2">
+                                                            <label class="labelText">Vehicle&nbsp;<span class="text-danger">*</span></label><br>
+                                                            <input class="custom-input">
+                                                      </div>
+                                                      <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-2">
+                                                            <label class="labelText">Accessories</label><br>
+                                                            <input class="custom-input">
+                                                      </div>
+                                                      <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-2">
+                                                            <label class="labelText">WindShield</label><br>
+                                                            <input class="custom-input">
+                                                      </div>
+                                                      <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-2">
+                                                            <label class="labelText">Extended TPPD</label><br>
+                                                            <input class="custom-input">
+                                                      </div>
+                                                </div>
+                                          </div>
+                                          </div>
+                                    </div>
+                                    </div>
+                              </mat-card>
+                              <div class="text-center mt-2 mb-2">
+                                    
+                                    <button class="btn custom-btn-success" (click)="onNext()">Next</button>
+                                </div>
+                        </mat-tab>
+                        <mat-tab label="T352DAY">
+                              <mat-card class="p-1">
+                                    <div class="row" style="padding-left: 5px;">
+                                          <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                <div class="card">
+                                                <div class="card-header ">
+                                                      <span class="headerFont">Motor Details</span>
+                                                </div>
+                                                <div class="card-body">
+                                                      <div class="row mt-2">
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Make</label><br>
+                                                                  <span>Toyota</span>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Model</label><br>
+                                                                  <span>Landcruiser</span>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Body Type</label><br>
+                                                                  <span>Hardtop</span>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Vehicle Usage</label><br>
+                                                                  <span>Private or Normal</span>
+                                                            </div>
+                                                      </div>
+                                                      <!-- <hr class="m-0 p-0"> -->
+                                                      <div class="row mt-2">
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Motor Category</label><br>
+                                                                  <span>Motor Vehicle</span>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Engine No</label><br>
+                                                                  <span>7712</span>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Engine Capacity</label><br>
+                                                                  <span>4200</span>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Manufacture Year</label><br>
+                                                                  <span>2014</span>
+                                                            </div>
+                                                      </div>
+                                                      <!-- <hr class="m-0 p-0"> -->
+                                                      <div class="row mt-2">
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Owner Categry</label><br>
+                                                                  <span>Company</span>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Seating Capacity</label><br>
+                                                                  <span>8</span>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Gross Weight</label><br>
+                                                                  <span>2400</span>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 col-lg-3 col-sm-6 mt-1">
+                                                                  <label class="labelText">Tare Weight</label><br>
+                                                                  <span>2000</span>
+                                                            </div>
+                                                      </div>
+                                                      <!-- <hr class="m-0 p-0"> -->
+                                                </div>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </mat-card>
+                              <mat-card class="p-1">
+                                    <div class="row" style="padding-left: 5px;">
+                                    <div class="col-sm-6 col-md-6 col-lg-6">
+                                          <div class="card">
+                                                <div class="card-header ">
+                                                      <span class="headerFont">Vehicle Details</span>
+                                                </div>
+                                                <div class="card-body">
+                                                <div class="row mt-2">
+                                                      <div class="col-12 col-sm-6 col-md-4 col-lg-4 mt-2">
+                                                            <label class="labelText">Insurance Type&nbsp;<span class="text-danger">*</span></label><br>
+                                                            <ng-select class="custom-input-select" appendTo="body" [items]="sourceList" [(ngModel)]="sourceValue"  bindValue="Code" bindLabel="CodeDesc">
+                                                            </ng-select>
+                                                      </div>
+                                                      <div class="col-12 col-sm-6 col-md-4 col-lg-4 mt-2">
+                                                            <label class="labelText">Insurance Class&nbsp;<span class="text-danger">*</span></label><br>
+                                                            <input class="custom-input">
+                                                      </div>
+                                                      <div class="col-12 col-sm-6 col-md-4 col-lg-4 mt-2">
+                                                            <label class="labelText">Body Type&nbsp;<span class="text-danger">*</span></label><br>
+                                                            <input class="custom-input" >
+                                                      </div>
+                                                      <div class="col-12 col-sm-6 col-md-4 col-lg-4 mt-2">
+                                                            <label class="labelText">Motor Usage&nbsp;<span class="text-danger">*</span></label><br>
+                                                            <ng-select class="custom-input-select" appendTo="body" [items]="sourceList" [(ngModel)]="sourceValue"  bindValue="Code" bindLabel="CodeDesc">
+                                                            </ng-select>
+                                                      </div>
+                                                      <div class="col-12 col-sm-6 col-md-4 col-lg-4 mt-2">
+                                                            <label class="labelText">Claims Applicable?</label><br>
+                                                            <div class="hidden-toggles">
+                                                                  <input name="coloration-level1" type="radio" id="claims_yes" class="hidden-toggles__input">
+                                                                  <label for="claims_yes" class="hidden-toggles__label">Yes</label>
+                                                                  
+                                                                  <input name="coloration-level1" type="radio" id="claims_no" class="hidden-toggles__input" checked>
+                                                                  <label for="claims_no" class="hidden-toggles__label">No</label>	
+                                                            </div>
+                                                      </div>
+                                                      <div class="col-12 col-sm-6 col-md-4 col-lg-4 mt-2">
+                                                            <label class="labelText">Gps Tracking Enabled?</label><br>
+                                                            <div class="hidden-toggles">
+                                                                  <input name="gps-level1" type="radio" id="gps_yes" class="hidden-toggles__input">
+                                                                  <label for="gps_yes" class="hidden-toggles__label">Yes</label>
+                                                                  
+                                                                  <input name="gps-level1" type="radio" id="gps_no" class="hidden-toggles__input" checked>
+                                                                  <label for="gps_no" class="hidden-toggles__label">No</label>	
+                                                            </div>
+                                                      </div>
+                                                      
+                                                      <div class="col-12 col-sm-6 col-md-4 col-lg-4 mt-2">
+                                                            <label class="labelText">TIRA CoverNote No</label><br>
+                                                            <input class="custom-input">
+                                                      </div>
+                                                </div>
+                                                </div>
+                                          </div>
+                                          
+                                    </div>
+                                    <div class="line-middle" style="padding-top: 5px !important;padding-bottom: 5px !important;"></div>
+                                    <div class="col-sm-5 col-md-5 col-lg-5">
+                                          <div class="card">
+                                          <div class="card-header d-flex justify-content-between p-0">
+                                                <div >
+                                                      <span class="headerFont">SumInsured Details</span>
+                                                </div>
+                                                <div>
+                                                      <span class="headerFont2">Currency(TZS)</span>    
+                                                </div>
+                                          </div>
+                                          <div class="card-body">
+                                                <div class="row">
+                                                      <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-2">
+                                                            <label class="labelText">Vehicle&nbsp;<span class="text-danger">*</span></label><br>
+                                                            <input class="custom-input">
+                                                      </div>
+                                                      <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-2">
+                                                            <label class="labelText">Accessories</label><br>
+                                                            <input class="custom-input">
+                                                      </div>
+                                                      <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-2">
+                                                            <label class="labelText">WindShield</label><br>
+                                                            <input class="custom-input">
+                                                      </div>
+                                                      <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-2">
+                                                            <label class="labelText">Extended TPPD</label><br>
+                                                            <input class="custom-input">
+                                                      </div>
+                                                </div>
+                                          </div>
+                                          </div>
+                                    </div>
+                                    </div>
+                              </mat-card>
+                              <div class="text-center mt-2 mb-2">
+                                    <button class="btn custom-btn-back" (click)="onPrevious()">Previous</button>&nbsp;
+                                    <button class="btn custom-btn-success" (click)="onProceed()">Submit</button>
+                                </div>
+                        </mat-tab>
+                  </mat-tab-group>
+            </mat-card>
+      <div class="text-center mt-2 mb-2">
+            <button class="btn custom-btn-back" (click)="getBack()">Back</button>&nbsp;
+            <button class="btn custom-btn-success" (click)="onProceed()">Proceed</button>
+        </div>
+<ng-template #expansionTpl let-row>
+      {{row.name}}
+    </ng-template>

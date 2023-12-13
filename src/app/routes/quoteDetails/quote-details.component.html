@@ -1,0 +1,334 @@
+<breadcrumb></breadcrumb>
+      <mat-card class="p-1">
+            <div class="row p-2" style="padding-left: 5px;">
+                  <div class="col-sm-6 col-md-6 col-lg-6">
+                              <div class="card">
+                                    <div class="card-header ">
+                                          <span class="headerFont">Period Of Insurance</span>
+                                    </div>
+                                    <div class="card-body">
+                                      <div class="row p-0">
+                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                                  <label class="labelText">Start Date</label><br>
+                                                  <mat-form-field>
+                                                        <input matInput [matDatepicker]="picker" >
+                                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker></mat-datepicker>
+                                                  </mat-form-field>
+                                            </div>
+                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                                  <label class="labelText">End Date</label><br>
+                                                  <mat-form-field>
+                                                        <input matInput [matDatepicker]="picker2" >
+                                                        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker2></mat-datepicker>
+                                                  </mat-form-field>
+                                            </div>
+                                      </div>
+                                      <div class="row p-0" style="margin-top: -11px !important;">
+                                            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                                  <label class="labelText">Currency</label><br>
+                                                  <div class="row" style="padding-left: 5px;padding-right: 5px;">
+                                                        <div class="col-7 col-sm-8 col-md-8 col-lg-8 p-0">
+                                                              <ng-select class="custom-input3" appendTo="body" [items]="sourceList" [(ngModel)]="sourceValue"  bindValue="Code" bindLabel="CodeDesc">
+                                                              </ng-select>
+                                                        </div>
+                                                        <div class="col-5 col-sm-4 col-md-4 col-lg-4 p-0">
+                                                              <input type="text" class="custom-input2" id="basic-url" aria-describedby="basic-addon3">
+                                                        </div>
+                                                  </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                                  <label class="labelText">PromoCode</label><br>
+                                                  <input class="custom-input">
+                                            </div>
+                                      </div>
+                                    </div>
+                              </div>
+                  </div>
+                  <div class="line-middle" style="padding-top: 5px !important;padding-bottom: 5px !important;"></div>
+                  <div class="col-sm-5 col-md-5 col-lg-5">
+                        <div class="card">
+                              <div class="card-header ">
+                                    <span class="headerFont">Broker Information</span>
+                              </div>
+                              <div class="card-body">
+                                <div class="row">
+                                      <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-2">
+                                            <label class="labelText">Source Type</label><br>
+                                            <ng-select class="custom-input-select" appendTo="body" [items]="sourceList" [(ngModel)]="sourceValue"  bindValue="Code" bindLabel="CodeDesc">
+                                            </ng-select>
+                                      </div>
+                                      <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-2">
+                                        <label class="labelText">Source Code</label><br>
+                                        <input class="custom-input">
+                                      </div>
+                                </div>
+                                <div class="row">
+                                      <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-2">
+                                            <label class="labelText">Source Name</label><br>
+                                            <input class="custom-input" >
+                                      </div>
+                                      <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-2">
+                                            <label class="labelText">Branch Name</label><br>
+                                            <ng-select class="custom-input-select" appendTo="body" [items]="sourceList" [(ngModel)]="sourceValue"  bindValue="Code" bindLabel="CodeDesc">
+                                            </ng-select>
+                                      </div>
+                                </div>
+                              </div>
+                          </div>
+                  </div>
+            </div>
+      </mat-card>
+      <mat-card>
+            <div class="row p-2" style="padding-left: 5px;">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="card">
+                                    <div class="card-header">
+                                          <span class="headerFont">Vehicle Search</span>
+                                    </div>
+                                    
+                                    <div class="card-body p-2">
+                                          <div class="row">
+                                                <div class="col-sm-5 col-md-3 col-lg-3 mt-2">
+                                                      <label class="labelText">Search By</label><br>
+                                                      <ng-select class="custom-input-select" appendTo="body" [items]="sourceList" [(ngModel)]="sourceValue"  bindValue="Code" bindLabel="CodeDesc">
+                                                      </ng-select>
+                                                </div>
+                                                <div class="col-sm-5 col-md-3 col-lg-3 mt-2">
+                                                      <label class="labelText">Search Value</label><br>
+                                                      <input class="custom-input" style="max-width: 100% !important;">
+                                                </div>
+                                                <div class="col-sm-2 col-md-2 col-lg-2 mt-3">
+                                                      <button class="btn custom-btn-success"><i class="fa fa-search"></i>Search</button>
+                                                </div>
+                                          </div>
+                                    </div>
+                        </div>
+                  </div>
+            </div>
+      </mat-card>
+      <mat-card *ngIf="list.length!=0">
+            <div class="row p-2" style="padding-left: 5px;">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="card mt-2">
+                              <div class="card-header">
+                                    <span class="headerFont">Existing Vehicles</span>
+                              </div>
+                              <div class="card-body">
+                                    <div class="row">
+                                          <div class="col-sm-12 col-md-12 col-lg-12">
+                                                <mtx-grid [data]="list"
+                                                      [columns]="columns"
+                                                      [loading]="isLoading"
+                                                      [columnResizable]="columnResizable"
+                                                      [multiSelectable]="multiSelectable"
+                                                      [rowSelectable]="rowSelectable"
+                                                      [hideRowSelectionCheckbox]="hideRowSelectionCheckbox"
+                                                      [rowHover]="rowHover"
+                                                      [rowStriped]="rowStriped"
+                                                      [showToolbar]="showToolbar"
+                                                      [toolbarTitle]="'Data Grid Toolbar'"
+                                                      [columnHideable]="columnHideable"
+                                                      [columnSortable]="columnSortable"
+                                                      [columnPinnable]="columnPinnable"
+                                                      [expandable]="expandable"
+                                                      [expansionTemplate]="expansionTpl"
+                                                      [pageOnFront]="showPaginator"
+                                                      [showPaginator]="showPaginator"
+                                                      [pageSizeOptions]="[5,10,50,100]"
+                                                      [pageIndex]="0"
+                                                      [pageSize]="5"
+                                                      (sortChange)="changeSort($event)"
+                                                      (selectionChange)="changeSelect($event)">
+                                                </mtx-grid>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </mat-card>
+      <div class="text-center mt-2 mb-2">
+            <button class="btn custom-btn-back">Back</button>&nbsp;
+            <button class="btn custom-btn-success" (click)="onProceed()">Proceed</button>
+      </div>
+<ng-template #expansionTpl let-row>
+      {{row.name}}
+    </ng-template>
+
+    <!-- 
+      <div class="row" style="padding-left: 5px;">
+              <div class="col-sm-8 col-md-8 col-lg-8">
+                    <div class="card">
+                        <div class="card-header ">
+                              
+                              <span class="headerFont">Broker Information</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="row mt-2">
+                                  <div class="col-12 col-sm-6 col-md-3 col-lg-3 mt-2">
+                                        <label class="labelText">Source Type</label><br>
+                                        <ng-select class="custom-input-select" appendTo="body" [items]="sourceList" [(ngModel)]="sourceValue"  bindValue="Code" bindLabel="CodeDesc">
+                                        </ng-select>
+                                  </div>
+                                  <div class="col-12 col-sm-6 col-md-3 col-lg-3 mt-2">
+                                    <label class="labelText">Source Code</label><br>
+                                    <input class="custom-input">
+                                  </div>
+                                  <div class="col-12 col-sm-6 col-md-3 col-lg-3 mt-2">
+                                    <label class="labelText">Source Name</label><br>
+                                    <input class="custom-input" >
+                                  </div>
+                                  <div class="col-12 col-sm-6 col-md-3 col-lg-3 mt-2">
+                                    <label class="labelText">Branch Name</label><br>
+                                    <ng-select class="custom-input-select" appendTo="body" [items]="sourceList" [(ngModel)]="sourceValue"  bindValue="Code" bindLabel="CodeDesc">
+                                    </ng-select>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mt-2">
+                        <div class="card-header ">
+                              <span class="headerFont">Period Of Insurance</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="row mt-2 p-0">
+                              <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+                                    <div class="row p-0">
+                                          <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                                <label class="labelText">Start Date</label><br>
+                                                <mat-form-field>
+                                                        <input matInput [matDatepicker]="picker" >
+                                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker></mat-datepicker>
+                                                </mat-form-field>
+                                          </div>
+                                          <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                                  <label class="labelText">End Date</label><br>
+                                                  <mat-form-field>
+                                                        <input matInput [matDatepicker]="picker2" >
+                                                        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                                        <mat-datepicker #picker2></mat-datepicker>
+                                                </mat-form-field>
+                                            </div>
+                                    </div>
+                              </div>
+                                  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                    <label class="labelText">Currency</label><br>
+                                    <div class="row" style="padding-left: 5px;padding-right: 5px;">
+                                          <div class="col-7 col-sm-8 col-md-8 col-lg-8 p-0">
+                                                <ng-select class="custom-input3" appendTo="body" [items]="sourceList" [(ngModel)]="sourceValue"  bindValue="Code" bindLabel="CodeDesc">
+                                                </ng-select>
+                                          </div>
+                                          <div class="col-5 col-sm-4 col-md-4 col-lg-4 p-0">
+                                                <input type="text" class="custom-input2" id="basic-url" aria-describedby="basic-addon3">
+                                          </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-6 col-md-3 col-lg-3">
+                                    <label class="labelText">PromoCode</label><br>
+                                    <input class="custom-input">
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                              <span class="headerFont">Vehicle Search</span>
+                        </div>
+                        
+                        <div class="card-body p-2">
+                              <div class="row">
+                                    <div class="col-sm-5 col-md-3 col-lg-3 mt-2">
+                                          <label class="labelText">Search By</label><br>
+                                          <ng-select class="custom-input-select" appendTo="body" [items]="sourceList" [(ngModel)]="sourceValue"  bindValue="Code" bindLabel="CodeDesc">
+                                          </ng-select>
+                                    </div>
+                                    <div class="col-sm-5 col-md-4 col-lg-4 mt-2">
+                                          <label class="labelText">Search Value</label><br>
+                                          <input class="custom-input" style="max-width: 100% !important;">
+                                    </div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2 mt-3">
+                                          <button class="btn custom-btn-success"><i class="fa fa-search"></i>Search</button>
+                                    </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="card mt-2">
+                        <div class="card-header">
+                              <span class="headerFont">Existing Vehicles</span>
+                        </div>
+                        <div class="card-body">
+                              <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12">
+                                          <mtx-grid [data]="list"
+                                                [columns]="columns"
+                                                [loading]="isLoading"
+                                                [columnResizable]="columnResizable"
+                                                [multiSelectable]="multiSelectable"
+                                                [rowSelectable]="rowSelectable"
+                                                [hideRowSelectionCheckbox]="hideRowSelectionCheckbox"
+                                                [rowHover]="rowHover"
+                                                [rowStriped]="rowStriped"
+                                                [showToolbar]="showToolbar"
+                                                [toolbarTitle]="'Data Grid Toolbar'"
+                                                [columnHideable]="columnHideable"
+                                                [columnSortable]="columnSortable"
+                                                [columnPinnable]="columnPinnable"
+                                                [expandable]="expandable"
+                                                [expansionTemplate]="expansionTpl"
+                                                [pageOnFront]="showPaginator"
+                                                [showPaginator]="showPaginator"
+                                                [pageSizeOptions]="[5,10,50,100]"
+                                                [pageIndex]="0"
+                                                [pageSize]="5"
+                                                (sortChange)="changeSort($event)"
+                                                (selectionChange)="changeSelect($event)">
+                                          </mtx-grid>
+                                    </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-2 mb-2">
+                        <button class="btn custom-btn-back">Back</button>&nbsp;
+                        <button class="btn custom-btn-success" (click)="onProceed()">Proceed</button>
+                    </div>
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-4">
+                  <mat-tab-group>
+                        <mat-tab label="Personal Info">
+                              <div class="row">
+                                    <div class="col-6 col-md-6 col-lg-6 col-sm-6 mt-1">
+                                          <label class="labelText">Customer Name</label><br>
+                                          <span>John Abraham</span>
+                                    </div>
+                                    <div class="col-6 col-md-6 col-lg-6 col-sm-6 mt-1">
+                                          <label class="labelText">Customer Type</label><br>
+                                          <span>Individual</span>
+                                    </div>
+                                    <hr class="m-0 p-0">
+                                    <div class="col-6 col-md-6 col-lg-6 col-sm-6 mt-1">
+                                          <label class="labelText">Date Of Birth</label><br>
+                                          <span>08/04/1993</span>
+                                    </div>
+                                    <div class="col-6 col-md-6 col-lg-6 col-sm-6 mt-1">
+                                          <label class="labelText">Mobile Number</label><br>
+                                          <span>255 8564635645</span>
+                                    </div>
+                                    <hr class="m-0 p-0">
+                                    <div class="col-6 col-md-6 col-lg-6 col-sm-6 mt-1">
+                                          <label class="labelText">ID Type</label><br>
+                                          <span>Passport Number</span>
+                                    </div>
+                                    <div class="col-6 col-md-6 col-lg-6 col-sm-6 mt-1">
+                                          <label class="labelText">Id Number</label><br>
+                                          <span>TR7564874RVN</span>
+                                    </div>
+                                    <hr class="m-0 p-0">
+                              </div>
+                        </mat-tab>
+                        <mat-tab label="Vehicle Info"> Content 2 </mat-tab>
+                  </mat-tab-group>
+              </div>
+            </div>-->

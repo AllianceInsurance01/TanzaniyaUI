@@ -1,0 +1,227 @@
+/* You can add global styles to this file, and also import other style files */
+@use 'app/theme/style';
+@use 'styles/themes';
+@use 'styles/custom';
+@use 'styles/grid';
+@use 'styles/helpers';
+@use 'styles/plugins';
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+
+.card-body{
+    padding: 2px 4px !important;
+}
+.card{
+    border: 1px solid #fff;
+}
+.card-header{
+    background-color: #fff !important;
+    border: none !important;
+    padding: 0px !important;
+}
+.headerFont{
+    color: #121C2D;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+}
+.headerFont2{
+    line-height: 32px;
+    text-align: end;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(82, 121, 121);
+}
+.labelText{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+}
+.custom-input-select{
+    min-width: 170px;
+    border-radius: 6px;
+    border: 1px solid #8891AA;
+    background: #FFF;
+    display: inline-flex;
+    height: 30px;
+    padding: 6px;
+    align-items: center;
+    gap: 108px;
+    flex-shrink: 0;
+}
+.custom-input{
+    min-width: 170px;
+    width: 100% !important;
+    border-radius: 6px;
+    border: 1px solid #8891AA;
+    background: #FFF;
+    display: inline-flex;
+    height: 30px;
+    padding: 6px;
+    align-items: center;
+    gap: 108px;
+    flex-shrink: 0;
+}
+.custom-input3{
+    min-width: 120px;
+    border-radius: 6px;
+    border: 1px solid #8891AA;
+    background: #FFF;
+    display: inline-flex;
+    height: 30px;
+    padding: 6px;
+    align-items: center;
+    gap: 108px;
+    flex-shrink: 0;
+}
+.custom-input2{
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #8891AA;
+    background: #FFF;
+    display: inline-flex;
+    height: 30px;
+    padding: 6px;
+    align-items: center;
+    gap: 108px;
+    flex-shrink: 0;
+}
+.ng-select{
+    margin-top: 0px !important;
+    position: relative !important;
+}
+
+::ng-deep .mat-mdc-form-field-infix{
+    max-height: 20px !important;
+        max-width: 10px !important;
+}
+::ng-deep .mat-mdc-form-field {
+        max-height: 10px !important;
+        display: unset !important;
+}
+.productCard{
+    border-radius: 25px !important;
+    cursor: pointer !important;
+    min-width: 150px;
+    max-width: 250px;
+    min-height: 100px;
+    max-height: 100px;
+    box-shadow: -4px 4px 35px 0px rgba(0,0,0,0.1);
+}
+.productImg{
+    padding-left: 10px;
+    height: 70px;
+    width: 100px;
+}
+.custom-btn-black{
+    min-width: 250px;
+    background-color: rgb(26, 24, 24);
+    color: rgba(255, 255, 255, 1);
+}
+.custom-btn-black:hover{
+    border: 1px solid rgb(26, 24, 24) !important;
+}
+.custom-btn-success{
+    background-color: rgba(252, 68, 18, 1);
+    color: rgba(255, 255, 255, 1);
+}
+.custom-btn-success:hover{
+    border: 1px solid rgba(252, 68, 18, 1);
+}
+.custom-btn-back:hover{
+    border: 1px solid rgb(26, 24, 24) !important;
+}
+.custom-btn-back{
+    background-color: #E1E3EA;
+    color: rgb(22, 22, 22);
+}
+.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+    color: rgba(252, 68, 18, 1) !important;
+}
+.mat-mdc-tab-group, .mat-mdc-tab-nav-bar {
+    --mdc-tab-indicator-active-indicator-color: rgba(252, 68, 18, 1) !important;
+}
+.mat-mdc-tab-body-content {
+    overflow-x: hidden !important;
+}
+.displayText{
+    color: #18CF20;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.coverCard1{
+    width: 100%;
+    height: 225px;
+    padding: 18px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    border: 1px solid rgba(252, 68, 18, 1);
+    background: #333B85;
+}
+.coverCard2{
+    width: 100%;
+    height: 180px;
+    padding: 18px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    border: 1px solid #101828;
+    background: rgba(255, 255, 255, 0.02);
+}
+.innerLabel{
+    color: #FFF;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.innerLabel2{
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.innerLabel3{
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.innerLabel4{
+    color: black;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.innerLabel5{
+    color: black;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.line-middle {
+    width: 1px;
+    height: auto !important;
+    background: linear-gradient(to right,
+            transparent 0%,
+            transparent calc(50% - 0.81px),
+            #EAECF0 calc(50% - 0.8px),
+            #EAECF0 calc(50% + 0.8px),
+            transparent calc(50% + 0.81px),
+            transparent 100%);
+}
+::ng-deep .custom-input-select {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+}
+.custom-input3{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+  

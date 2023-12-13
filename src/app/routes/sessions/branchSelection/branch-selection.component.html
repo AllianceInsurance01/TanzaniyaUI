@@ -1,0 +1,30 @@
+<div class="d-flex w-full h-full">
+  <mat-card class="m-auto" style="max-width: 380px;">
+    <mat-card-header class="m-b-24">
+      <mat-card-title>{{'branch_title' | translate}}!</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form class="form-field-full" [formGroup]="loginForm">
+       
+        <mat-form-field class="w-full">
+          <mat-label>Branch</mat-label>
+          <mtx-select [items]="branchList" bindLabel="BranchName" bindValue="BranchCode" autofocus
+          formControlName="branchValue" required>
+          </mtx-select>
+          <mat-error *ngIf="branchValue.invalid">
+            <span *ngIf="branchValue.errors?.required">{{'please_choose' | translate}}&nbsp;{{'branch' | translate}}
+            </span>
+          </mat-error>
+        </mat-form-field>
+
+        <!-- <mat-checkbox formControlName="rememberMe">{{'remember_me' | translate}}
+        </mat-checkbox> -->
+
+        <button class="w-full m-y-16" mat-raised-button color="primary"
+                [disabled]="!!loginForm.invalid" [loading]="isSubmitting"
+                (click)="onBranchSelect()">{{'proceed' | translate}}</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
